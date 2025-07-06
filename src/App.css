@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+html,body{
+  width: 100vw;
+  background-color: var(--background);
+  color: var(--text-color);
+  font-family: var(--font-body);
+}
+
+
+h1{
+
+  color: var(--primary-color);
+  font-family: var(--font-heading);
+}
+h2, h3{
+}
+.logo {
+  font-family: var(--font-heading);
+}
+
+.btn{
+  @apply !inline-block px-6 py-5 rounded-2xl bg-[var(--primary-color)] max-w-max 
+  text-[var(--second-color)] text-xl font-bold transition-all transform hover:-translate-y-1;
+}
+.btn-out{
+
+  @apply !inline-block px-6 py-5 rounded-2xl border-2 border-[var(--primary-color)] max-w-max 
+  hover:text-[var(--second-color)] text-xl font-bold transition-all  hover:bg-[var(--primary-color)] text-[var(--primary-color)];
+}
+
+.title{
+  @apply w-full flex justify-center items-center text-4xl mt-5
+}

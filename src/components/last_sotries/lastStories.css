@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+
+
+.content{
+    @apply flex flex-col gap-6;
+}
+.card{
+    @apply flex max-sm:flex-col-reverse max-sm:gap-6 bg-[var(--second-color)] w-full !justify-between rounded-2xl py-6 px-12;
+}
+.content-card{
+    @apply w-full flex flex-col gap-6;
+}
+.title-card{
+    @apply text-3xl;
+}
+.description-card{
+    @apply md:w-3/4
+}
+.image-card{
+    @apply md:w-1/5 overflow-hidden h-full p-4 bg-[var(--background)] rounded-2xl
+}.image-card img{
+    @apply rounded-2xl
+}
+.read-more{
+    @apply border-[--primary-color] hover:border-b-2 flex w-[70px] hover:scale-110 transform transition-all
+}
