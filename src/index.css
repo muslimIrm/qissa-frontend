@@ -26,7 +26,7 @@ html,body{
 
 .container{
   margin: 0 auto ;
-  @apply w-[85%] lg:w-[90%] md:w-[95%] sm:w-[98%];
+  @apply w-[98%] lg:w-[90%] md:w-[95%] ;
 }
 
 section{

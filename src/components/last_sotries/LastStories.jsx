@@ -3,7 +3,7 @@ import "./lastStories.css"
 import axois from "axios"
 import URL from "../../url"
 import DefultImg from '../../assets/defult-image.jpg'
-
+import { Link } from "react-router-dom"
 function LastStories(){
     const [stories, setStories] = useState([])
     useEffect(()=>{
@@ -31,7 +31,7 @@ function LastStories(){
                                     <h2 className="title-card">{story.title}</h2>
                                     <p className="description-card">{story.content.length > 200? story.content.slice(0, 200)+ "..." : story.content}</p>
                                     <span className="">{story.surce}</span>
-                                    <a href={`/stories/${story._id}`} className="read-more">اقرأ المزيد</a>
+                                    <Link to={`/stories/${story._id}`} className="read-more">اقرأ المزيد</Link>
                                 </div>
                                 <div className="image-card">
                                     <img src={story.image ? story.image : DefultImg} alt={story.title} />

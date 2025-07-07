@@ -1,23 +1,15 @@
 
 import './App.css'
-import Footer from './components/footer/Footer'
-
-// Components
-import Header from './components/header/Header'
-import Home from './components/home/Home'
-import LastStories from './components/last_sotries/LastStories'
-import ContactSection from './components/verse/contact/Contact'
-import Verse from './components/verse/Verse'
+import { Routes, Route } from 'react-router-dom';
+import HomePage from "./pages/Home"
+import Story from './pages/Story';
 function App() {
   return (
-    <>
-      <Header/>
-      <Home/>
-      <Verse/>
-      <LastStories/>
-      <ContactSection/>
-      <Footer/>
-    </>
+    <Routes>
+      
+      <Route path="/" element={<HomePage />} />
+      <Route path="/story/:id" element={<Story />} />
+    </Routes>
   )
 }
 
