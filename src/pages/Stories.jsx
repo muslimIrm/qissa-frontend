@@ -5,7 +5,8 @@ import URL from "../url"
 import DefultImg from '../assets/defult-image.jpg'
 import { Link } from "react-router-dom"
 import '../components/last_sotries/lastStories.css'
-
+import Loading from "../components/Loading";
+import ErrorLoading from "../components/ErrorLoading";
 const stories = () => {
     const [stories, setStories] = useState([])
 
@@ -38,10 +39,13 @@ const stories = () => {
 
             } catch (error) {
                 console.log("somethings went wrog.", error)
-                
-                if(!hasMore){
+                if (error.message === "Network Error") {
+
                     setError(true);
-                }else{
+                }
+                if (!hasMore) {
+                    setError(true);
+                } else {
 
                     setHasMore(false)
                 }
@@ -100,35 +104,26 @@ const stories = () => {
                                     <span className="">{story.surce}</span>
                                     <Link to={`/stories/${story._id}`} className="read-more">اقرأ المزيد</Link>
                                 </div>
-                                <div className="image-card">
-                                    <img src={story.image ? story.image : DefultImg} alt={story.title} />
-                                </div>
+                                {
+                                    story.image && story.image.length > 0 ? (
+                                        <div className="image-card">
+                                            <img src={story.image} alt={story.title} />
+                                        </div>) : ""
+                                }
                             </div>
                         ))}
-                        {loading && (
-                            <div className="flex justify-center items-center">
-                                <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-                            </div>
-                        )}
+                        {loading && (<Loading />)}
                     </div>
 
                     {error && (
-                        <div className="text-center !mt-6 !w-full flex flex-col !items-center !justify-center !h-full">
-                            <p className="text-red-600 !mb-2">فشل في تحميل القصص. تأكد من الاتصال وأعد المحاولة.</p>
-                            <button
-                                onClick={() => {
-                                    setError(false);
-                                    setLoading(false);
-                                    setHasMore(true);
-                                    setReload(true)
-                                    setPage(1); 
-                                    setStories([]); 
-                                }}
-                                className="!px-6 !py-2 bg-[var(--primary-color)] text-white rounded-xl shadow hover:opacity-90 transition"
-                            >
-                                إعادة المحاولة
-                            </button>
-                        </div>
+                        <ErrorLoading onClick={() => {
+                            setError(false);
+                            setLoading(false);
+                            setHasMore(true);
+                            setReload(true)
+                            setPage(1);
+                            setStories([]);
+                        }} />
                     )}
 
                 </div>

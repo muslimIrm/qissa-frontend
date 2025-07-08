@@ -4,7 +4,7 @@ import axois from "axios"
 import URL from "../../url"
 
 function Verse(){
-    const [ verse, setVerse ] = useState({text: " لَقَدْ كَانَ فِي قَصَصِهِمْ عِبْرَةٌ لِّأُولِي الْأَلْبَابِ", verse: "12", chapter: "21"})
+    const [ verse, setVerse ] = useState({text: " لَقَدْ كَانَ فِي قَصَصِهِمْ عِبْرَةٌ لِّأُولِي الْأَلْبَابِ", verse: "111", chapter: "12"})
     useEffect(()=>{
         async function fetchDante() {
             
