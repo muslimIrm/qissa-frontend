@@ -20,7 +20,7 @@ h2, h3{
 }
 
 .btn{
-  @apply !inline-block px-6 py-5 rounded-2xl bg-[var(--primary-color)] max-w-max 
+  @apply inline-block px-6 py-5 rounded-2xl bg-[var(--primary-color)] max-w-max 
   text-[var(--second-color)] text-xl font-bold transition-all transform hover:-translate-y-1;
 }
 .btn-out{

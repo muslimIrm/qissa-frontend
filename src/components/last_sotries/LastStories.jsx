@@ -6,12 +6,21 @@ import DefultImg from '../../assets/defult-image.jpg'
 import { Link } from "react-router-dom"
 function LastStories(){
     const [stories, setStories] = useState([])
+
+    const [loading, setLoading] = useState(false)
+    const [reload, setReload] = useState(false);
     useEffect(()=>{
         async function fetchData(){
-            const res = await axois.get(`${URL}api/stories`)
-            const storiesRaw = res.data.storiesRaw
-            setStories(storiesRaw)
-            console.log(res.data.storiesRaw)
+            setLoading(true)
+            try {
+                const res = await axois.get(`${URL}api/stories`)
+                const storiesRaw = res.data.storiesRaw
+                setStories(storiesRaw)
+                setLoading(false)
+                
+            } catch (error) {
+                
+            }
             
         }
         fetchData()
@@ -24,7 +33,7 @@ function LastStories(){
                 </div>
 
                 <div className="content">
-                    <div className="stories flex flex-col max-md:flex-col gap-4">
+                    <div className="stories flex items-center justify-center flex-col max-md:flex-col gap-4">
                         {stories.map((story, index) => (
                             <div className="card" key={index}>
                                 <div className="content-card">
@@ -38,6 +47,13 @@ function LastStories(){
                                 </div>
                             </div>
                         ))}
+                        {loading && (
+                            <div className="flex justify-center items-center">
+                                <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                            </div>
+                        )}
+                        <Link to="/stories" className={`btn ${loading? "hidden-important": ""}`} >المزيد من القصص</Link>
+
                     </div>
                 </div>
             </div>

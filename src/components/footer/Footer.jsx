@@ -9,7 +9,7 @@ function Footer(){
                 <div className="title">
                     <h1>قصـة</h1>
                 </div>
-                <div className="flex gap-6">
+                <div className="flex gap-6 sm:flex-row flex-col">
                         <li><a href="#home" className=" hover:!underline transition-all ">الصفحة الرئيسية</a></li>
                         <li><a href="#verse" className=" hover:!underline transition-all ">آية</a></li>
                         <li><a href="#last_stories" className=" hover:!underline transition-all ">أحدث القصص</a></li>
