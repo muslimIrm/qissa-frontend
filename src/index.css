@@ -13,9 +13,9 @@
   --font-body: 'Cairo', sans-serif;
 }
 html,body{
-
   scroll-behavior: smooth;
 }
+
 *{
   @apply m-0 p-0 box-border;
   list-style: none;

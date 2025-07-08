@@ -71,7 +71,7 @@ const Story = () => {
                 {
                   story.image && story.image.length > 0 ? (
                     <img
-                      src={story.img}
+                      src={story.image}
                       alt="صورة القصة"
                       className="float-left w-[200px] h-auto !mr-6 !mb-4 rounded-xl shadow"
                     />) : ""
