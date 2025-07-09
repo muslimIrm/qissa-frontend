@@ -2,7 +2,6 @@ import { useState, useEffect, } from "react"
 import { TfiBackRight } from "react-icons/tfi";
 import axios from "axios"
 import URL from "../url"
-import DefultImg from '../assets/defult-image.jpg'
 import { Link } from "react-router-dom"
 import '../components/last_sotries/lastStories.css'
 import Loading from "../components/Loading";
