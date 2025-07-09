@@ -16,9 +16,9 @@ function Footer(){
                         <li><a href="#contact" className=" hover:!underline transition-all ">تواصل معنا</a></li>
                 </div>
                 <div className="flex gap-4">
-                    <a className=" inline-block text-2xl transition-all hover:scale-110 transform" href=""><FaInstagram /></a>
-                    <a className=" inline-block text-2xl transition-all hover:scale-110 transform" href=""><FaTelegram /></a>
-                    <a className=" inline-block text-2xl transition-all hover:scale-110 transform" href=""> <FaLinkedin/></a>
+                    <a className=" inline-block text-2xl transition-all hover:scale-110 transform" href="https://www.instagram.com/ms0h_0/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+                    <a className=" inline-block text-2xl transition-all hover:scale-110 transform" href="https://t.me/codil0"  target="_blank" rel="noopener noreferrer"><FaTelegram /></a>
+                    <a className=" inline-block text-2xl transition-all hover:scale-110 transform" href="https://www.linkedin.com/in/muslim-hashim-5863a3344?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer"> <FaLinkedin/></a>
                 </div>
                 
                 <span>جميع الحقوق محفوظة &copy; 2025</span>
