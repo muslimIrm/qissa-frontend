@@ -20,7 +20,7 @@ function Header() {
                     </div>
                     
                     {/* nav links */}
-                    <ul className={`${isOpenMenu? "show" : ""}`}>
+                    <ul className={`${isOpenMenu? "show" : ""} !gap-[7px]`}>
                         <li><a href="#home">الصفحة الرئيسية</a></li>
                         <li><a href="#verse">آية</a></li>
                         <li><a href="#last_stories">أحدث القصص</a></li>

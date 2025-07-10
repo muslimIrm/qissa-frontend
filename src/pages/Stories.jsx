@@ -29,7 +29,6 @@ const stories = () => {
             try {
                 const res = await axios.get(`${URL}api/stories?limit=${limit}&page=${page}`)
                 const newStories = await res.data.storiesRaw
-                console.log(`${URL}api/stories?limit=${limit}&page=${page}`)
                 setStories(prev => {
                     const existingIds = new Set(prev.map(s => s._id));
                     const uniqueStories = newStories.filter(s => !existingIds.has(s._id));
@@ -37,15 +36,12 @@ const stories = () => {
                 });
 
                 const totalPages = res.data.totalPages;
-                console.log(newStories.length === 0)
                 if (page >= totalPages || newStories.length === 0) {
                     setHasMore(false)
                 }
                 setError(false);
-                console.log("Has more:", hasMore)
 
             } catch (error) {
-                console.log("somethings went wrog.", error)
                 if (error.message === "Network Error") {
                     setError(true);
                 } else {
@@ -62,14 +58,12 @@ const stories = () => {
     useEffect(() => {
         const handleScroll = () => {
             const scrollBottm = window.innerHeight + window.scrollY >= document.body.offsetHeight - 100;
-            console.log("✅ handleScroll fired")
             if (scrollBottm && !loading && hasMore) {
                 setPage((prev) => prev + 1)
             }
         }
 
         window.addEventListener("scroll", handleScroll)
-        console.log("scroll listener attached")
 
         return () => {
             console.log("🧹 scroll listener removed")

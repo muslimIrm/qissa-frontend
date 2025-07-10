@@ -10,9 +10,11 @@ ul{
 }
 
 ul li{
-    @apply text-2xl max-lg:text-xl text-[var(--heading-color)] hover:text-[var(--primary-color)] transition-all duration-300 !border-b-2 border-transparent hover:!border-[var(--primary-color)]
+    @apply sm:text-2xl max-md:text-lg md:text-xl text-[var(--heading-color)] hover:text-[var(--primary-color)] transition-all duration-300 !border-b-2 border-transparent hover:!border-[var(--primary-color)]
 }
-
+ul li a{
+    width: 100%;
+}
 .true{
     font-size: 1.6rem;
 }

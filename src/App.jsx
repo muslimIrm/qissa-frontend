@@ -1,16 +1,29 @@
-
+import { lazy, Suspense } from 'react';
 import './App.css'
 import { Routes, Route } from 'react-router-dom';
-import HomePage from "./pages/Home"
-import Story from './pages/Story';
-import Stories from './pages/Stories';
+
+const Story = lazy(() => import('./pages/Story'));
+const HomePage = lazy(()=> import("./pages/Home"))
+const Stories = lazy(()=> import('./pages/Stories'))
+
 function App() {
   return (
     <Routes>
-      
-      <Route path="/" element={<HomePage />} />
-      <Route path="/stories/:id" element={<Story />} />
-      <Route path="/stories/" element={<Stories />} />
+
+      <Route path="/" element={
+      <Suspense fallback={<div>جاري التحميل...</div>}>
+        <HomePage />
+      </Suspense>
+      } />
+      <Route path="/stories/:id" element={
+      <Suspense fallback={<div>جاري التحميل...</div>}>
+        <Story />
+      </Suspense>} />
+      <Route path="/stories/" element={
+        <Suspense fallback={<div>جاري التحميل...</div>}>
+        <Stories />
+      </Suspense>
+      } />
     </Routes>
   )
 }

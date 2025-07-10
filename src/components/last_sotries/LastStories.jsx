@@ -50,7 +50,7 @@ function LastStories(){
                                 {
                                     story.image && story.image.length > 0 ? (
                                 <div className="image-card">
-                                    <img src={story.image} alt={story.title} />
+                                    <img src={story.image} width={400} height={400} alt={"card-image"} loading="lazy"/>
                                 </div>) : ""
                                 }
                             </div>

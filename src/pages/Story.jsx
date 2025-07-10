@@ -1,9 +1,7 @@
 import { TfiBackRight } from "react-icons/tfi";
-import { Link } from "react-router-dom";
-import img from "../assets/bg.png";
 import axois from "axios"
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import URL from "../url";
 import ErrorLoading from "../components/ErrorLoading";
 import Loading from "../components/Loading";
@@ -17,11 +15,9 @@ const Story = () => {
   useEffect(() => {
     async function fetchData() {
       setLoading(true)
-      console.log(error)
       try {
         const res = await axois.get(`${URL}api/stories/${id}`)
         const result = await res.data.story
-        console.log(result)
         setStory(result)
         setLoading(false)
         setError(false)

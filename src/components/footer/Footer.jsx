@@ -10,10 +10,12 @@ function Footer(){
                     <h1>قصـة</h1>
                 </div>
                 <div className="flex gap-6 sm:flex-row flex-col">
-                        <li><a href="#home" className=" hover:!underline transition-all ">الصفحة الرئيسية</a></li>
-                        <li><a href="#verse" className=" hover:!underline transition-all ">آية</a></li>
-                        <li><a href="#last_stories" className=" hover:!underline transition-all ">أحدث القصص</a></li>
-                        <li><a href="#contact" className=" hover:!underline transition-all ">تواصل معنا</a></li>
+                        <ol>
+                            <li><a href="#home" className=" hover:!underline transition-all ">الصفحة الرئيسية</a></li>
+                            <li><a href="#verse" className=" hover:!underline transition-all ">آية</a></li>
+                            <li><a href="#last_stories" className=" hover:!underline transition-all ">أحدث القصص</a></li>
+                            <li><a href="#contact" className=" hover:!underline transition-all ">تواصل معنا</a></li>
+                        </ol>
                 </div>
                 <div className="flex gap-4">
                     <a className=" inline-block text-2xl transition-all hover:scale-110 transform" href="https://www.instagram.com/ms0h_0/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>

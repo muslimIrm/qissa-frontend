@@ -1,12 +1,12 @@
 import "./home.css";
-import Img from "../../assets/home_image.png";
-import Bg from "../../assets/bg.png"
+import Img from "../../assets/home_image.webp";
+import Bg from "../../assets/bg.webp"
 function Home() {
 
     return (
 
         <section className="home relative overflow-hidden" id="home">
-            <div className="container">
+            <div className="container !flex !justify-between gap-10">
                 <div className="content ">
                     <div>
                         <h1>قصة</h1>
@@ -27,11 +27,11 @@ function Home() {
                         <h2>الموقع قيد التطوير</h2>
                         <h3>نبذل اقصى الجهود لتقديم الموقع بالصورى الفضلى، شاكرين صبركم.</h3>
                     </div>
-                    <img src={Bg} className="absolute bottom-0 right-0 w-4xl opacity-9" style={{zIndex: -1}} />
+                    <img alt="background-image" width={800} height={800} src={Bg} className="absolute bottom-0 right-0 w-4xl opacity-9" style={{zIndex: -1}} />
 
                 </div>
                 <div className="image">
-                    <img src={Img} alt="" className=" w-[580px]  rounded-2xl" />
+                    <img fetchpriority="high" src={Img} alt="home-image" className=" w-[580px]  rounded-2xl" />
                 </div>
             </div>
         </section>
