@@ -91,7 +91,7 @@ const stories = () => {
 
             <div className="felx w-full !h-dvh">
                 <div className="content container !h-full">
-                    <div className="stories container !py-3 flex !flex-col gap-4 max-md:!mt-24">
+                    <div className="stories container !py-3 flex !flex-col gap-4 !mt-24">
                         {stories.map((story, index) => (
                             <div className="card" key={index}>
                                 <div className="content-card">
@@ -106,7 +106,7 @@ const stories = () => {
                                 </div>
                                 {story.image && story.image.length > 0 && (
                                     <div className="image-card">
-                                        <img src={story.image} alt={story.title} />
+                                        <img loading="lazy" width={500} height={500} src={story.image} alt={story.title} />
                                     </div>
                                 )}
                             </div>

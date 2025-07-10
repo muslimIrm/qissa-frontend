@@ -28,7 +28,7 @@
 
 /* ✅ حاوية الصورة */
 .image-card {
-  @apply !w-full md:!w-[500px] !aspect-square !overflow-hidden !rounded-2xl !bg-[var(--background)] !flex !items-center !justify-center;
+  @apply !w-full md:!w-[350px] !aspect-square !overflow-hidden !rounded-2xl !bg-[var(--background)] !flex !items-center !justify-center;
 }
 
 
